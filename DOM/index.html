@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="header">Herkese Salam</h1>
+      <p class="text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      </p>
+      <p class="text2">Inventore tempora nulla aliquid maiores repellat!</p>
+      <button id="action">click mee</button>
+      <button id="addItem">siyahiya yeni item elave elemek</button>
+      <ul id="items">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </div>
+    <div id="colorDiv" >salam</div>
+    <script>
+      document.getElementById("header");
+      document.getElementsByTagName("p");
+      document.getElementsByClassName("text2");
+      document.querySelector("p");
+      document.querySelectorAll("p");
+
+      document.querySelector(".text").textContent = "just lorem";
+
+      document.getElementById("action").addEventListener("click", function () {
+        document.getElementById("colorDiv").style.backgroundColor = "blue";
+      });
+
+      document.getElementById("addItem").addEventListener("click", function () {
+        let newItem = document.createElement("li");
+        newItem.textContent = "yeni element";
+        document.getElementById("items").appendChild(newItem);
+      });
+    </script>
+  </body>
+</html>
